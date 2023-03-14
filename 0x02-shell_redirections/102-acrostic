@@ -1,18 +1,2 @@
 #!/bin/bash
-
-# Read the input text from standard input (i.e. from the user)
-text=$(cat)
-
-# Split the input text into lines
-IFS=$'\n' read -d '' -ra lines <<< "$text"
-
-# Get the first letter of each line
-decoded=""
-for line in "${lines[@]}"; do
-  first_letter=${line:0:1}
-  decoded="$decoded$first_letter"
-done
-
-# Output the decoded message (with a trailing new line)
-echo "$decoded"
-
+cut -c 1 \ paste -s -d "
