@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#A bash script that displays "Best School" 10 times
+#But on the 9th iteration displays "Hi"
+
+
+index=1
+
+while [ $index -lt 10 ];
+do
+	if [ $index -eq 9 ];
+	then
+	echo "Hi"
+	fi
+	echo "Best school"
+	((index++))
+done
