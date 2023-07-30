@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#This script dispalys "BestSchool" 10 times using the until loop
+
+index=1
+
+until [ $index -gt 10 ];
+do
+	echo "Best School"
+	((index++))
+done
