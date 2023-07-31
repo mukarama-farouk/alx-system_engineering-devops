@@ -3,7 +3,7 @@
 #But on the 9th iteration displays "Hi"
 
 
-index=1
+index=0
 
 while [ $index -lt 10 ];
 do
