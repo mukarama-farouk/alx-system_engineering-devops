@@ -9,7 +9,7 @@ while [ $index -lt 10 ];
 do
 	if [ $index -eq 9 ];
 	then
-	echo "Hi"
+		echo "Hi"
 	fi
 	echo "Best school"
 	((index++))
