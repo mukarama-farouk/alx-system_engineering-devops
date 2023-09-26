@@ -2,8 +2,8 @@
 #Bash script that configures a new Ubuntu machine to respect above requirements
 #(this script will be run on the server itself)
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get -y install nginx
 echo "Hello World" | sudo tee /var/www/html/index.html
 sudo service nginx -t
-sudo service nginx start
+sudo service nginx restart
