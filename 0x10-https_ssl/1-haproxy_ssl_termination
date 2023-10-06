@@ -33,12 +33,12 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend haproxy_balancer
+frontend ramaconsult.tech-frontend
     bind *:443 ssl crt /etc/ssl/ramaconsult.tech.pem
-    mode http
-    default_backend webservers
+    http-request set-header X-Forwarded-Proto https
+    default_backend ramaconsult.tech-backend
 
-backend webservers
+backend ramaconsult.tech-backend
     balance roundrobin
     server 311291-web-01 100.26.247.60:80 check
     server 311291-web-02 100.25.29.45:80 check
